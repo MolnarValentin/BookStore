@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = KönyvtárAlkalmazás
+build_property.RootNamespace = KönyvtárAlkalmazás
+build_property.ProjectDir = C:\Users\Proxy1\Desktop\Beadandok\asp.net\KönyvtárAlkalmazás\KönyvtárAlkalmazás\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Proxy1\Desktop\Beadandok\asp.net\KönyvtárAlkalmazás\KönyvtárAlkalmazás
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/AKezdooldal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xBS2V6ZG9vbGRhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/KeresesListazas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xLZXJlc2VzTGlzdGF6YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/KönyvVisszahozva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xLw7ZueXZWaXNzemFob3p2YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/KönyvVisszahozvaVisszaigazolás.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xLw7ZueXZWaXNzemFob3p2YVZpc3N6YWlnYXpvbMOhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/KörDiagram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xLw7ZyRGlhZ3JhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/KörDiagramÁbra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xLw7ZyRGlhZ3JhbcOBYnJhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/SikeresKönyvHozzáadás.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xTaWtlcmVzS8O2bnl2SG96esOhYWTDoXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/VonalDiagram.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xWb25hbERpYWdyYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/VonalDiagramÁbra.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1xWb25hbERpYWdyYW3DgWJyYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/ÚjKölcsönzés.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1zDmmpLw7ZsY3PDtm56w6lzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/ÚjKölcsönzésVisszaigazolás.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1zDmmpLw7ZsY3PDtm56w6lzVmlzc3phaWdhem9sw6FzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/AdminPages/ÚjKönyv.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWRtaW5QYWdlc1zDmmpLw7ZueXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/Elokolcsonzes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xFbG9rb2xjc29uemVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/Előkölcsönzéseim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xFbMWRa8O2bGNzw7ZuesOpc2VpbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/FKezdooldal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xGS2V6ZG9vbGRhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/KeresesListazas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xLZXJlc2VzTGlzdGF6YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/KodMegadasa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xLb2RNZWdhZGFzYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/Kolcsonzes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xLb2xjc29uemVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/Kölcsönzéseim.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xLw7ZsY3PDtm56w6lzZWltLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/FelhasznaloPages/SikeresKodAktivalas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmVsaGFzem5hbG9QYWdlc1xTaWtlcmVzS29kQWt0aXZhbGFzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/Regisztráció.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN6dHLDoWNpw7MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Proxy1/Desktop/Beadandok/asp.net/KönyvtárAlkalmazás/KönyvtárAlkalmazás/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-v9e593twza

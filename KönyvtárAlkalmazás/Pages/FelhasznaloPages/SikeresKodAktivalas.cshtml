@@ -1,0 +1,17 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.SikeresKodAktivalasModel
+@{
+}
+@if (Model.SikertelenAzonositas)
+{
+        <h3 class="text-danger">Hibás Azonosító</h3>
+}
+
+@if (Model.SikeresKölcsönzés)
+{
+        <h3>Sikeres Kölcsönzés!</h3>
+        <h2>A lejárati dátum: @Model.Lejárat</h2>
+}
+<div class="pt-4">
+    <a asp-page="/FelhasznaloPages/Előkölcsönzéseim">Vissza az előkölcsönzésekhez</a>
+</div>

@@ -1,0 +1,14 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.KodMegadasaModel
+@{
+}
+<form method="post" class="form-inline">
+  <div class="form-group">
+    <label for="KodValidacio">Azonosító kód</label>
+    <span asp-validation-for="Azonositokod" class="text-danger"></span>
+    <input asp-for="Azonositokod" type="number" id="KodValidacio" class="form-control mx-sm-3">
+    <button class="btn" type="submit">Ok</button>
+  </div>
+</form>
+
+

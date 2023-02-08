@@ -1,0 +1,72 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.AdminPages.VonalDiagramÁbraModel
+@{
+    bool nincstalalat = false;
+
+    if (Model.Db.Count == 0 || Model.Db == null)
+    {
+        nincstalalat = true;
+    }
+
+}
+
+@if (nincstalalat)
+{
+    <h1>Nincs találat</h1>
+    <a asp-page="/AdminPages/VonalDiagram">Vissza</a>
+}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div>
+  <canvas id="myChart"></canvas>
+</div>
+ 
+<script>
+    var nev = [];
+    var db = [];
+
+    @if (nincstalalat == false)
+    {
+        foreach (var item in Model.Nevek)
+        {
+            @:nev.push('@item');
+        }
+        foreach (var item in Model.Db)
+        {
+            @:db.push('@item');
+        }
+
+    }
+
+  const data = {
+    labels: nev,
+    datasets: [{
+      label: 'Darab Kölcsönzés',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: db,
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true,
+                ticks: {
+                stepSize: 1
+                }
+            }
+        }
+    }
+  };
+</script>
+
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>

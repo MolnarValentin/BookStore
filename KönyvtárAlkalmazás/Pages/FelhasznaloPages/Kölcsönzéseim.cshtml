@@ -1,0 +1,40 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.KölcsönzéseimModel
+@{
+}
+@if (Model.Kölcsönzések != null && Model.Kölcsönzések.Count > 0)
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Cím</th>
+                    <th>Író</th>
+                    <th>Lejárati dátum</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+            @foreach (var item in Model.Kölcsönzések)
+            {
+                <tr>
+                    @foreach (var konyv in Model.Könyvek)
+                    {
+                        if (konyv == item.Könyv)
+                        {
+                            <td>@konyv.Cím</td>
+                            <td>@konyv.Író</td>
+                        }
+                    }           
+                    <td> @item.LejáratiDátum</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+}
+else
+{
+        <h1>Nincs találat</h1>
+        <a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza</a>
+}

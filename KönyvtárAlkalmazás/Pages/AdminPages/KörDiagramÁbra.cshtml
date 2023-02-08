@@ -1,0 +1,63 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.AdminPages.KörDiagramÁbraModel
+@{
+    bool nincstalalat = false;
+
+    if (Model.irokegyeseveltemp.Count == 0 || Model.irokegyeseveltemp == null)
+    {
+        nincstalalat = true;
+    }
+    
+}
+
+@if (nincstalalat)
+{
+        <h1>Nincs találat</h1>
+        <a asp-page="/AdminPages/KörDiagram">Vissza</a>
+}
+else {
+    <h1 class="h-100 d-flex align-items-center justify-content-center">Kölcsönzések írók szerint</h1> 
+}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<canvas id="myChart" class="m-5 p-5" width="400" height="400"></canvas>
+<script>
+const ctx = document.getElementById('myChart').getContext('2d');
+var db = [];
+var iro = [];
+var colors = [];
+
+@if (nincstalalat == false)
+    {
+        foreach(var item in Model.irokegyeseveltemp)
+        {
+            @:iro.push('@item');
+        }
+        foreach (var item in Model.dbkonyvtemp)
+        {
+            @:db.push('@item');
+        }
+        
+    }
+    for (let i = 0; i < this.db.length; i++)
+        {
+            this.colors.push('#' + Math.floor(Math.random() * 16777215).toString(16));
+        }
+const myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: iro,
+  datasets: [{
+    label: 'Kölcsönzések írók szerint',
+    data: db,
+    backgroundColor: this.colors,
+    hoverOffset: 4
+  }]
+    },
+    
+});
+</script>
+
+
+

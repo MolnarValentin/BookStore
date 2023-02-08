@@ -1,0 +1,13 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.KolcsonzesModel
+@{
+}
+@if (Model.Kolcsonzes != null)
+{
+    <h1>Sikeres Kölcsönzés!</h1>
+    <h2>Lejárati dátum: @Model.Kolcsonzes.LejáratiDátum</h2>
+}
+else {
+        <h1>Valami Hiba Történt!</h1>
+}
+<a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza a kereséshez</a>

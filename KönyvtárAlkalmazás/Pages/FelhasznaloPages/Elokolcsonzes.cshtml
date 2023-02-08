@@ -1,0 +1,17 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.ElokolcsonzesModel
+@{
+}
+@if (Model.Előkölcsönzés != null)
+{
+        <h1>Sikeres Előkölcsönzés!</h1>
+        <h2>Legkésőbbi érvényességi dátum: @Model.Előkölcsönzés.LejáratiDátum</h2>
+        <h2>Aktiváló kód az érvényesításhez: @Model.Előkölcsönzés.AzonosítóKód</h2>
+        <p>Ezt E-mail címre is elküldjük, ezzel lehet érvényesíteni</p>
+        <p>Amint a könyv ismét elérhető lesz, és/vagy változik a kezdeti dátuma az érvényesításnek szintén E-mailben fogjuk önt értesíteni róla</p>
+}
+else
+{
+            <h1>Valami Hiba Történt!</h1>
+}
+<a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza a kereséshez</a>

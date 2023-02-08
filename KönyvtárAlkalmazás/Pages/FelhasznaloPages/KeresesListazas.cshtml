@@ -1,0 +1,76 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.KeresesListazasModel
+@{
+}
+@if (Model.KönyvekLista != null && Model.KönyvekLista.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Cím</th>
+                <th>Író</th>
+                <th>Kiadó</th>
+                <th>ISBN</th>
+                <th>Állapot</th>
+                <th>Kölcsönzés</th>
+            </tr>
+        </thead>
+        <tbody>
+        
+            
+        
+            @foreach (var item in Model.KönyvekLista)
+            {
+                <tr>
+                    <td> @item.Cím </td>
+                    <td> @item.Író </td>
+                    @if (item.Kiadó == null)
+                    {
+                        <td>?</td>
+                    }
+                    else {
+                        <td> @item.Kiadó </td>
+                    }
+
+                    <td> @item.ISBN </td>
+
+
+                    @if (item.Kikölcsönözték == false)
+                    {
+                        <td>Elérhető</td>
+                    }
+                    else
+                    {
+                        <td> Foglalt </td>
+                    }
+                   
+                    @if (item.Kikölcsönözték == false && item.Előkölcsönözték == false && HttpContext.Session.GetString("Admin") == null)
+                    {
+                        <td><a asp-page="/FelhasznaloPages/Kolcsonzes" asp-route-KönyvId="@item.Id">Kölcsönzés</a></td>
+                    }
+                    @if (item.Kikölcsönözték == true && item.Előkölcsönözték == false && HttpContext.Session.GetString("Admin") == null)
+                    {
+                        @if (Model.Kölcsönzések != null)
+                        {
+                            @foreach (var kolcsonzes in Model.Kölcsönzések)
+                            {
+
+                                if (kolcsonzes.Könyv == item && Model.Felhasználó != null && kolcsonzes.KölcsönzőEmailCíme != Model.Felhasználó.Email && kolcsonzes.LejáratiDátum > DateTime.Now)
+                                {
+                                    <td><a asp-page="/FelhasznaloPages/Elokolcsonzes" asp-route-KönyvId="@item.Id">Előkölcsönzés</a></td>
+                                }
+
+
+                            }
+                        }
+                    } 
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else 
+{
+    <h1>Nincs találat</h1>
+    <a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza a kereséshez</a>
+}

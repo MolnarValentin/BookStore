@@ -1,0 +1,42 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.AdminPages.ÚjKönyvModel
+@{
+}
+
+<form method="post">
+
+  <div class="form-outline mb-4">
+    <span asp-validation-for="Cím" class="text-danger"></span>
+    <input asp-for="Cím" type="text" id="form5Example1" class="form-control" />
+    <label class="form-label" for="form5Example1">Cím</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <span asp-validation-for="Író" class="text-danger"></span>
+    <input asp-for="Író" type="text" id="form5Example2" class="form-control" />
+    <label class="form-label" for="form5Example2">Író</label>
+  </div>
+
+
+  <div class="form-outline mb-4">
+    <span asp-validation-for="Kiadó" class="text-danger"></span>
+    <input asp-for="Kiadó" type="text" id="form5Example3" class="form-control" />
+    <label class="form-label" for="form5Example3">Kiadó(Ha ismert)</label>
+  </div>
+
+    @if (Model.NotUniqueISBN)
+    {
+        <div class="form-outline mb-4">
+            <div class="bg-danger text-white rounded ps-1">Ez az ISBN szám már foglalt</div>
+        </div>
+    }
+
+  <div class="form-outline mb-4">
+    <span asp-validation-for="ISBN" class="text-danger"></span>
+    <input asp-for="ISBN" type="text" id="form5Example4" class="form-control" />
+    <label class="form-label" for="form5Example4">ISBN</label>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary btn-block mb-4">Hozzáad</button>
+</form>

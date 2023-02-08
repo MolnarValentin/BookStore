@@ -1,0 +1,75 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.FelhasznaloPages.ElőkölcsönzéseimModel
+@{
+}
+
+@if (Model.Felhasználó != null && Model.Előkölcsönzés != null && Model.Könyvek != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <td>KezdetiDátum</td>
+                <td>LejáratiDátum</td>
+                <td>Könyv címe</td>
+                <td>Könyv írója</td>
+                <td>ISBN</td>
+                <td>Kikölcsönzés</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Előkölcsönzés)
+            {
+                <tr>
+                    <td>
+                        @item.KezdetiDátum
+                    </td>
+                    <td>
+                        @item.LejáratiDátum
+                    </td>
+                    <td>
+                        @foreach (var konyv in Model.Könyvek)
+                        {
+                            if (konyv == item.Könyv)
+                            {
+                                @item.Könyv.Cím
+                            }
+                        }
+                    </td>
+                    <td>
+                        @foreach (var konyv in Model.Könyvek)
+                        {
+                            if (konyv == item.Könyv)
+                            {
+                                @item.Könyv.Író
+                            }
+                        }
+                    </td>
+                    <td>
+                        @foreach (var konyv in Model.Könyvek)
+                        {
+                            if (konyv == item.Könyv)
+                            {
+                                @item.Könyv.ISBN
+                            }
+                        }
+                    </td>
+
+                    <td>
+                        @if (item.KezdetiDátum < DateTime.Now)
+                        {
+                            <a asp-route-ElőkölcsönzésId ="@item.Id" asp-route-KönyvId ="@item.Könyv.Id" asp-page="/FelhasznaloPages/KodMegadasa">Kikölcsönzöm</a>
+                        }
+                    </td>
+
+                </tr>
+                    
+            }
+        </tbody>
+    </table>
+}
+else{
+    <h1>Nincsenek előkölcsönzések</h1>
+    <a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza a kezdőoldalra</a>
+}
+
+

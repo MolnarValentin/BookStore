@@ -1,0 +1,44 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.AdminPages.KeresesListazasModel
+@{
+}
+@if (Model.KönyvekLista != null && Model.KönyvekLista.Count > 0)
+{
+        <table class="table">
+            <thead>
+                <tr>
+                    <th> Cím</th>
+                    <th>Író</th>
+                    <th>Kiadó</th>
+                    <th>ISBN</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+            @foreach (var item in Model.KönyvekLista)
+            {
+                        <tr>
+                            <td> @item.Cím </td>
+                            <td> @item.Író </td>
+                    @if (item.Kiadó == null)
+                    {
+                                    <td>?</td>
+                    }
+                    else
+                    {
+                                    <td> @item.Kiadó </td>
+                    }
+
+                            <td> @item.ISBN </td>
+                        </tr>
+            }
+            </tbody>
+        </table>
+}
+else
+{
+        <h1>Nincs találat</h1>
+        <a asp-page="/FelhasznaloPages/Fkezdooldal">Vissza a kereséshez</a>
+}

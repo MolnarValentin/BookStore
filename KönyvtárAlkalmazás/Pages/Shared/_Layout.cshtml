@@ -1,0 +1,130 @@
+﻿@{
+    bool admin = false;
+    bool felhasznalo = false;
+    if (Context.Session.GetString("Bejelentkezve") == "igen" && Context.Session.GetString("Admin") == "igen")
+    {
+        admin = true;
+    }
+    else if (Context.Session.GetString("Bejelentkezve") == "igen")
+    {
+        felhasznalo = true;
+    }
+    
+     string? felhasznalonev = Context.Session.GetString("Felhasználónév");
+
+}
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - KönyvtárAlkalmazás</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/KönyvtárAlkalmazás.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/b818d52d5d.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/x-icon" href="/emblem_library.ico">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <img class="logo" src="~/Képek/logo.png"/>
+                @if (felhasznalo)
+                {
+                     <a class="navbar-brand" asp-area="" asp-page="/FelhasznaloPages/Fkezdooldal">KönyvtárAlkalmazás</a>
+                }
+                else if (admin){
+                     <a class="navbar-brand" asp-area="" asp-page="/AdminPages/AKezdooldal">KönyvtárAlkalmazás</a>
+                }
+                else {
+                     <a class="navbar-brand" asp-area="" asp-page="/Index">KönyvtárAlkalmazás</a>
+                }     
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">  
+                        @if (felhasznalo)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-page="/FelhasznaloPages/Kölcsönzéseim">Kölcsönzések</a>
+                            </li>  
+                        }
+                        @if (felhasznalo)
+                        {
+                             <li class="nav-item">
+                                     <a class="nav-link text-dark" asp-area="" asp-page="/FelhasznaloPages/Előkölcsönzéseim">Előkölcsönzések</a>
+                             </li>  
+                        }
+                        @if (felhasznalo)
+                        {
+                            <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-page="/FelhasznaloPages/Fkezdooldal">Keresés</a>
+                            </li>  
+                        }
+                        @if (admin)
+                        {
+                            <li class="nav-item">
+                                         <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/ÚjKönyv">Új Könyv Hozzáadása</a>
+                            </li>  
+                        }
+                        @if (admin)
+                        {
+                            <li class="nav-item">
+                                         <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/ÚjKölcsönzés">Új Kölcsönzés Hozzáadása</a>
+                            </li>  
+                        }
+                        @if (admin)
+                        {
+                             <li class="nav-item">
+                                         <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/KönyvVisszahozva">Könyv Visszahozva</a>
+                             </li>  
+                        }
+                        @if (admin)
+                        {
+                             <li class="nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/VonalDiagram">Kölcsönzések száma vonaldiagramon</a>
+                             </li>  
+                        }
+                        @if (admin)
+                        {
+                             <li class="nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/KörDiagram">Kölcsönzések száma írók szerint</a>
+                             </li>  
+                        }
+                        @if (admin)
+                        {
+                              <li class="nav-item">
+                                 <a class="nav-link text-dark" asp-area="" asp-page="/AdminPages/Akezdooldal">Könyvek Keresése</a>
+                              </li>  
+                        }
+                    </ul>
+                </div>
+                
+            </div>
+            @if (Context.Session.GetString("Bejelentkezve") == "igen")
+            {
+                    <li class="nav-item fw-bold me-4">
+                        @felhasznalonev
+                    </li>
+                <a class="nav-item nav-link text-dark" asp-area="" asp-page="/Index">Kijelentkezés</a>
+            }
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿@page
+@model KönyvtárAlkalmazás.Pages.AdminPages.AKezdooldalModel
+@{
+}
+<div class="container">
+
+    <div class="row height d-flex justify-content-center align-items-center">
+
+        <div class="col-md-8">
+
+            <span asp-validation-for="Keresés" class="text-danger"></span>
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <form method="post">
+                    <input asp-for="Keresés" type="text" class="form-control" placeholder="Könyv keresése cím/író/ISBN alapján">
+                    <button type="submit" class="btn btn-primary">Keresés</button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+ </div>

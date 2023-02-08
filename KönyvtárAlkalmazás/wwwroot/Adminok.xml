@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+<Rendszergazdak>
+	<Rendszergazda>
+		<Id>1</Id>
+		<Felhasználónév>Jacob</Felhasználónév>
+		<Vezetéknév>Kovács</Vezetéknév>
+		<Keresztnév>József</Keresztnév>
+		<Jelszó>1234</Jelszó>
+	</Rendszergazda>
+
+	<Rendszergazda>
+		<Id>2</Id>
+		<Felhasználónév>Matyi</Felhasználónév>
+		<Vezetéknév>Ludas</Vezetéknév>
+		<Keresztnév>Mátyás</Keresztnév>
+		<Jelszó>asd</Jelszó>
+	</Rendszergazda>
+
+	<Rendszergazda>
+		<Id>3</Id>
+		<Felhasználónév>a</Felhasználónév>
+		<Vezetéknév>a</Vezetéknév>
+		<Keresztnév>a</Keresztnév>
+		<Jelszó>a</Jelszó>
+	</Rendszergazda>
+	
+</Rendszergazdak>
